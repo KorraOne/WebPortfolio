@@ -8,7 +8,7 @@ function setup() {
 let grid = [];
 let rows, cols;
 let w = 20;
-let menuWidth = 100;
+let menuWidth = 0;
 let bombChance = 0.2;
 
 function setup() {
@@ -45,7 +45,7 @@ function draw() {
   }
 }
 
-function mouseClicked() {
+function mouseReleased() {
   x = floor(mouseX / w);
   y = floor(mouseY / w);
   grid[x][y].clicked();

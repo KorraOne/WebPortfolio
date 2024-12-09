@@ -2,7 +2,7 @@ const projects = [
     {
       title: 'MineSweeper',
       description: 'Description of Project 1',
-      image: 'projectImages/mineSweeper.png',
+      image: 'projectImages/mineSweeper.png break',
       link: 'projects/mineSweeper.html'
     },
   ];
