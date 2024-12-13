@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MogiData</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../projects.html">Projects</a></li>
+          <li><a href="../../about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Here are some visuals of my Mario Kart Races data</h1>
+      <div>
+        <h2>Placements Distribution</h2>
+        <img src="data:image/png;base64,{{ bar_plot_url }}" alt="Bar Plot">
+      </div> 
+      <div> 
+        <h2>Average Score per Race</h2> 
+        <img src="data:image/png;base64,{{ line_plot_url }}" alt="Line Plot"> 
+      </div> 
+      <p>Last updated: <span>{{ timestamp }}</span></p>
+    </main>
+  </body>
+</html>

@@ -42,4 +42,12 @@ body {
     bottom: 0;
   }
 
-  
+  .main-div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-evenly;
+  }

@@ -3,8 +3,14 @@ const projects = [
       title: 'MineSweeper',
       description: 'Description of Project 1',
       image: 'projectImages/mineSweeper.png break',
-      link: 'projects/mineSweeper.html'
+      link: 'projects/mineSweeper/mineSweeper.html'
     },
+    {
+      title: 'MogiData',
+      description: 'Analysis and Visualisation of Mogi Mario Kart Races',
+      image: 'projectImages/addWhenMadeImage',
+      link: 'projects/mogiData/mogiData.html'
+    }
   ];
   
   function displayProjects() {
