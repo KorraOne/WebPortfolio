@@ -43,8 +43,23 @@ body {
   }
 
   .main-div {
-    display: flex;
     justify-content: center;
+  }
+
+  .intro-container {
+    display: inline-block;
+    width: 50%;
+  }
+
+  @media (max-width: 750px) {
+    .intro-container {
+      width: 100%;
+    }  
+  }
+
+  .image-container {
+    display: inline-block;
+    align-self: center;
   }
 
   .footer-container {
