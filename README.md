@@ -1,1 +1,1 @@
-Not Complete or maintained. Was just a test to see learn hosting
+Not Complete or maintained. Was just a test to learn hosting
