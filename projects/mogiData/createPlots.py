@@ -89,7 +89,7 @@ def createMMRtrend():
   slope, intercept = np.polyfit(x_values, y_values, 1)
   best_fit_line = slope * x_values + intercept
 
-  plt.figure(figsize=(10, 6))
+  plt.figure(figsize=(6, 4))
   plt.scatter(x_values, y_values, marker='o', label='Data Points')
   plt.plot(x_values, best_fit_line, color='red', label=f'Line of Best Fit: y = {slope:.2f}x + {intercept:.2f}')
 
@@ -111,7 +111,7 @@ def createMultiScoreTrend():
     lst = RunningTotalDF.iloc[i, 1:14].tolist()
     points.append(lst)
 
-  plt.figure(figsize=(10, 6))
+  plt.figure(figsize=(6, 4))
 
   for index, inner_list in enumerate(points):
       plt.plot(range(1, 13), inner_list, marker='o', label=f'Line {index+1}')
@@ -125,8 +125,8 @@ def createMultiScoreTrend():
   plt.close()
   
 
-# createPlacementDistribution()
-# createScoreTrend()
-# createAveragePlacement()
-# createMMRtrend()
+createPlacementDistribution()
+createScoreTrend()
+createAveragePlacement()
+createMMRtrend()
 createMultiScoreTrend()
