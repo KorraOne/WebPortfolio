@@ -10,6 +10,12 @@
   border-style: dashed;
 }
 
+@media (max-width: 750px) {
+  .graph {
+    max-width: 100%;
+  }  
+}
+
 .image {
   max-width: 90%;
 }
