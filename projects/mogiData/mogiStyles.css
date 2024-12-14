@@ -1,0 +1,21 @@
+.graph-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.graph {
+  flex-direction: column;
+  max-width: 49%;
+  border: 1px;
+  border-style: dashed;
+}
+
+.image {
+  max-width: 90%;
+}
+
+.graph-text {
+  max-width: 90%;
+  text-align: center;
+  margin-bottom: 0px;
+}

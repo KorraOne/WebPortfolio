@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MogiData</title>
     <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="mogiStyles.css">
   </head>
   <body>
     <header>
@@ -19,15 +20,32 @@
 
     <main>
       <h1>Here are some visuals of my Mario Kart Races data</h1>
-      <div>
-        <h2>Placements Distribution</h2>
-        <img src="data:image/png;base64,{{ bar_plot_url }}" alt="Bar Plot">
-      </div> 
-      <div> 
-        <h2>Average Score per Race</h2> 
-        <img src="data:image/png;base64,{{ line_plot_url }}" alt="Line Plot"> 
-      </div> 
-      <p>Last updated: <span>{{ timestamp }}</span></p>
+      <div class="graph-wrapper">
+        <div class="graph">
+          <p class="graph-text">This trend shows my MMR (the elo system of MarioKart Lounge) 
+            is increasing as well as shows the fluctuation of gains and losses is to some degree cyclical</p>
+          <img class="image" src="plotImages/mmrTrends.png" alt="Matplotlib Graph">
+        </div>
+        <div class="graph">
+          <p class="graph-text">This shows my best race results tend to be in 1st and my worst tend to be in 10th</p>
+          <img class="image" src="plotImages/averagePlacement.png" alt="Matplotlib Graph">
+        </div>
+        <div class="graph">
+          <p class="graph-text">This shows that I place 3rd and 6th the most often. 
+            It also shows that I have a slight tilt on placing in the top 6</p>
+          <img class="image" src="plotImages/placementDistribution.png" alt="Matplotlib Graph">
+        </div>
+        <div class="graph">
+          <p class="graph-text">Not super useful but a cool visual that contains the scoring profile of every set of 
+            12 races I have competed in</p>
+          <img class="image" src="plotImages/multiScoreTrend.png" alt="Matplotlib Graph">
+        </div>
+        <div class="graph">
+          <p class="graph-text">This graph did not reveal as much info as I was hoping but depending on the 
+            steepness you can extrapolate what the Average Placement Graph shows just now in a worse format</p>
+          <img class="image" src="plotImages/scoresTrend.png" alt="Matplotlib Graph">
+        </div>
+      </div>
     </main>
   </body>
 </html>
