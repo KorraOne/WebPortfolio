@@ -1,7 +1,7 @@
 const projects = [
     {
       title: 'MineSweeper',
-      description: 'Description of Project 1',
+      description: 'Bomb defusing game',
       image: 'projectImages/mineSweeper.png break',
       link: 'projects/mineSweeper/mineSweeper.html'
     },
@@ -10,6 +10,12 @@ const projects = [
       description: 'Analysis and Visualisation of Mogi Mario Kart Races',
       image: 'projectImages/addWhenMadeImage',
       link: 'projects/mogiData/mogiData.html'
+    },
+    {
+      title: 'JumpyBird',
+      description: 'Flappy Bird Clone',
+      image: 'projectImages/addWhenMadeImage',
+      link: 'projects/flappyBird/index.html'
     }
   ];
   

@@ -1,0 +1,21 @@
+html, body {
+  margin: 5px;
+  padding: 0;
+  color: white;
+  background-color: rgb(0, 200, 255);
+  display: flex;
+}
+
+canvas {
+  display: flex;
+  border: 5px solid rgb(0, 0, 0);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10px;
+}
