@@ -16,7 +16,6 @@ function keyPressed() {
 function touchStarted() {
   if (mouseX > 0 && mouseX < width && 
       mouseY > 0 && mouseY < height) {
-    print("touch");
     if (bird.alive) {
       if (!gameStarted) {
         gameStarted = true;
@@ -29,7 +28,6 @@ function touchStarted() {
       resetGame();
     }
   }
-  return false;
 }
 
 function resetGame() {
