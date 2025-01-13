@@ -16,6 +16,12 @@ const projects = [
       description: 'Flappy Bird Clone',
       image: 'projectImages/addWhenMadeImage',
       link: 'projects/flappyBird/index.html'
+    },
+    {
+      title: 'ForceVisual',
+      description: 'Simulation of forces on generic objects',
+      image: 'projectImages/addWhenMadeImage',
+      link: 'projects/ForceVisual/index.html'
     }
   ];
   
