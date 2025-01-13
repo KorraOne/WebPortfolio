@@ -1,5 +1,6 @@
 let movers = [];
 let gravity, wind, mouseForce, jump;
+let debugButton, defaultConfig, gravitySlider, windSlider, mouseSlider, jumpSlider;
 
 function setup() {
   createCanvas(600, 600);
@@ -18,10 +19,18 @@ function setup() {
 
   // controls
   debugButton = createCheckbox("Force Lines", true);
+  defaultConfig = createButton("Default Parameters")
   gravitySlider = createSlider(-0.5, 0.5, 0.1, 0.1);
   windSlider = createSlider(-1, 1, 0.2, 0.1);
   mouseSlider = createSlider(-1, 2, 1, 0.5);
   jumpSlider = createSlider(-2, 2, -1, 0.1);
+
+  defaultConfig.mousePressed(function() {
+    gravitySlider.value(0.1);
+    windSlider.value(0.2);
+    mouseSlider.value(1);
+    jumpSlider.value(-1);
+  });
 }
 
 function draw() {
