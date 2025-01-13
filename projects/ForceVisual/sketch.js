@@ -1,5 +1,6 @@
 let movers = [];
-let gravity, wind, mouseForce, jump;
+let liquid;
+let gravity, wind, mouseForce, jump, water;
 let debugButton, defaultConfig, gravitySlider, windSlider, mouseSlider, jumpSlider;
 
 function setup() {
@@ -9,6 +10,7 @@ function setup() {
   wind = createVector(0.1, 0);
   mouseForce = 1;
 
+  // movers
   movers.push(new Mover(0, height / 2, 1, 16));
   movers.push(new Mover(0, height / 2, 3, 16));
   movers.push(new Mover(0, height / 2, 5, 16));
@@ -17,6 +19,10 @@ function setup() {
   movers.push(new Mover(0, height / 2, 11, 16));
   movers.push(new Mover(0, height / 2, 13, 16));
 
+  // liquids
+  // liquid = new Liquid(width/3, height/3, width/3, height/3, 0.1);
+  liquid = new Liquid(0, height * 2/3, width, height * 1/3, 0.1);
+
   // controls
   debugButton = createCheckbox("Force Lines", true);
   defaultConfig = createButton("Default Parameters")
@@ -24,6 +30,7 @@ function setup() {
   windSlider = createSlider(-1, 1, 0.2, 0.1);
   mouseSlider = createSlider(-1, 2, 1, 0.5);
   jumpSlider = createSlider(-2, 2, -1, 0.1);
+  waterButton = createCheckbox("Water", false);
 
   defaultConfig.mousePressed(function() {
     gravitySlider.value(0.1);
@@ -36,6 +43,7 @@ function setup() {
 function draw() {
   background(255, 200, 180);
 
+  // movers
   for (let mover of movers) {
     if (mouseIsPressed) {
       if (mouseX > 0 && mouseX < width && 
@@ -67,6 +75,13 @@ function draw() {
       mover.applyForce(friction);	
     }
 
+    if (waterButton.checked()) {
+      if (liquid.containsMover(mover)) {
+        let dragForce = liquid.calculateDrag(mover)
+        mover.applyForce(dragForce);
+      }
+    }
+
     mover.applyForce(p5.Vector.mult(gravity, mover.mass));
     mover.checkEdges();
     mover.update();
@@ -78,5 +93,10 @@ function draw() {
     wind.x = windSlider.value();
     mouseForce = mouseSlider.value();
     jump = jumpSlider.value();
+  }
+
+  // liquids
+  if (waterButton.checked()) {
+    liquid.show();
   }
 }

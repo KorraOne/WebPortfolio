@@ -4,21 +4,29 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sketch</title>
+    <title>Physics Simulation</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
     <script src="Mover.js"></script>
+    <script src="Liquid.js"></script>
   </head>
 
   <header>
     <div id="info">
       <h1>Simple force demostration</h1>
+      <h4>Legend:</h4>
       <p><span style="color: green;">Green</span> - Total Velocity</p>
-      <p>Thick Line - Average Acceleration</p>
-      <p>Thin Line - Individual Forces</p>
+      <p><span style="font-weight: bold;">Thick Line</span> - Average Acceleration</p>
+      <p>Thin Lines - Individual Forces</p>
+
+      <h4>Controls:</h4>
+      <p>&#128432; - Accel towards Mouse</p>
+      <p>SPACE - Upward Force / Jump</p>
+      <p>W - Lateral Wind Force</p>
+      <p>Sliders - gravity, wind, mouse, jump</p>
     </div>
   </header>
   <body>
