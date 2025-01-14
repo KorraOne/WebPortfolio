@@ -12,7 +12,7 @@ let sliderPipeSpeed,
     buttonDefaultSettings;
 
 function setup() {
-  createCanvas(800, 600);
+  createCanvas(500, 600);
 
   clouds = [];
   createBackground();

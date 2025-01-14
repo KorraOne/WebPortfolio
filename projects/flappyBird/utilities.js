@@ -32,12 +32,16 @@ function touchStarted() {
 
 function resetGame() {
   gameStarted = false;
-  bird = new Bird(200, height / 2);
+  bird = new Bird(100, height / 2);
   pipes = [];
   score = 0;
-  pipes.push(new Pipe(width - 300));
-  pipes.push(new Pipe(width));
-  pipes.push(new Pipe(width + 300));
+  // pipes.push(new Pipe(width - 300));
+  // pipes.push(new Pipe(width));
+  // pipes.push(new Pipe(width + 300));
+
+  for (let i = width - 200; i < width + 300; i += 300 ) {
+    pipes.push(new Pipe(i));
+  }
 }
 
 function createBackground() {
@@ -45,10 +49,10 @@ function createBackground() {
   clouds.push(new Cloud(100, 100));
   clouds.push(new Cloud(300, 200));
   clouds.push(new Cloud(500, 150));
-  clouds.push(new Cloud(700, 250));
+  // clouds.push(new Cloud(700, 250));
   clouds.push(new Cloud(900, 300));
   clouds.push(new Cloud(1100, 200));
-  clouds.push(new Cloud(1300, 150));
+  // clouds.push(new Cloud(1300, 150));
 }
 
 function drawBackgroud() {
