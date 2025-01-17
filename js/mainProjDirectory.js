@@ -1,43 +1,51 @@
 const projects = [
-    {
-      title: 'MineSweeper',
-      description: 'Bomb defusing game',
-      image: 'projectImages/mineSweeper.png break',
-      link: 'projects/mineSweeper/mineSweeper.html'
-    },
-    {
-      title: 'MogiData',
-      description: 'Analysis and Visualisation of Mogi Mario Kart Races',
-      image: 'projectImages/addWhenMadeImage',
-      link: 'projects/mogiData/mogiData.html'
-    },
-    {
-      title: 'JumpyBird',
-      description: 'Flappy Bird Clone',
-      image: 'projectImages/addWhenMadeImage',
-      link: 'projects/flappyBird/index.html'
-    },
-    {
-      title: 'ForceVisual',
-      description: 'Simulation of forces on generic objects',
-      image: 'projectImages/addWhenMadeImage',
-      link: 'projects/ForceVisual/index.html'
-    }
-  ];
-  
-  function displayProjects() {
-    const projectsContainer = document.getElementById('projectsContainer');
-    projects.forEach(project => {
-      const projectElement = document.createElement('div');
-      projectElement.innerHTML = `
-        <h3>${project.title}</h3>
-        <img src="${project.image}" alt="${project.title}">
-        <p>${project.description}</p>
-        <a href="${project.link}">View Project</a>
-      `;
-      projectsContainer.appendChild(projectElement);
-    });
+  {
+    title: 'Gravity Art',
+    description: 'Using gravity and trails to create art',
+    image: 'projectImages/GravityArt.png',
+    link: 'projects/GravityArt/index.html'
+  },
+  {
+    title: 'Jumpy Bird',
+    description: 'Flappy Bird Clone',
+    image: 'projectImages/JumpyBird.png',
+    link: 'projects/flappyBird/index.html'
+  },
+  {
+    title: 'Force Visual',
+    description: 'Simulation of forces on generic objects',
+    image: 'projectImages/ForceSimulator.png',
+    link: 'projects/ForceVisual/index.html'
+  },
+  {
+    title: 'Mine Sweeper',
+    description: 'Bomb defusing game',
+    image: 'projectImages/mineSweeper.png',
+    link: 'projects/mineSweeper/mineSweeper.html'
+  },
+  {
+    title: 'Mogi Data',
+    description: 'Analysis and Visualisation of Mogi Mario Kart Races',
+    image: 'projectImages/MogiData.png',
+    link: 'projects/mogiData/mogiData.html'
   }
-  
-  document.addEventListener('DOMContentLoaded', displayProjects);
-  
+];
+
+function displayProjects() {
+  const projectsContainer = document.getElementById('projectsContainer');
+  projects.forEach(project => {
+    const projectElement = document.createElement('a');
+    projectElement.classList.add('project');
+    projectElement.href = project.link; // Make the whole div clickable
+    projectElement.innerHTML = `
+      <img src="${project.image}" alt="${project.title}" class="project-image">
+      <div class="project-details">
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+      </div>
+    `;
+    projectsContainer.appendChild(projectElement);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', displayProjects);

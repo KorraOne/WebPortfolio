@@ -5,7 +5,7 @@ import numpy as np
 
 # set working space, it worked without this and then it didnt who knows why welp
 import os
-os.chdir("projects\mogiData")
+# os.chdir("projects\mogiData")
 
 derivedDataDF = pd.read_excel('MogiData.xlsx', sheet_name="DerivedData", header=None)
 RunningTotalDF = pd.read_excel('MogiData.xlsx', sheet_name="RunningTotals", header=None)

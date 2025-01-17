@@ -5,12 +5,30 @@ html, body {
   display: block;
 }
 
+canvas {
+  display: flex;
+  /* position: fixed; */
+  margin: 5px;
+  border: 5px solid rgb(0, 0, 0);
+
+  /* https://stackoverflow.com/questions/78926760/prevent-unwanted-user-interactions-on-html-canvas */
+  touch-action: none;
+  -ms-touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+p, h4 {
+  margin: 0px;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 
 header {
   background-color: #333;
@@ -32,26 +50,4 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-}
-
-canvas {
-  display: flex;
-  /* position: fixed; */
-  margin: 5px;
-  border: 5px solid rgb(0, 0, 0);
-
-  /* https://stackoverflow.com/questions/78926760/prevent-unwanted-user-interactions-on-html-canvas */
-  touch-action: none;
-  -ms-touch-action: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-p, h4 {
-  margin: 0px;
-  margin-left: 10px;
-}
-
-h1 {
-  margin-left: 10px;
 }
