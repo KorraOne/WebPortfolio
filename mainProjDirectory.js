@@ -1,5 +1,11 @@
 const projects = [
   {
+    title: 'Hand Recognition',
+    description: 'Places dots and recognises thumbs up or down',
+    image: 'projectImages/GravityArt.png',
+    link: 'projects/Hands/index.html'
+  },
+  {
     title: 'Gravity Art',
     description: 'Using gravity and trails to create art',
     image: 'projectImages/GravityArt.png',

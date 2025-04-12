@@ -16,7 +16,7 @@ function setup() {
   mover1 = new Mover(300, 200);
   mover2 = new Mover(300, 400);
 
-  mover1.velocity = createVector(3, 1);
+  mover1.velocity = createVector(5, 13);
 }
 
 function draw() {

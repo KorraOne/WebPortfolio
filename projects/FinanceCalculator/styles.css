@@ -1,0 +1,26 @@
+#calc-container {
+    display: flex;
+    max-width: 600px;
+    background-color: bisque;
+    overflow: hidden;
+}
+
+
+button {
+    display: block;
+}
+
+p {
+    display: inline;
+    margin: 20px;
+}
+
+#input-container, #output-container {
+    width: 50%;
+}
+
+.title-display {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
