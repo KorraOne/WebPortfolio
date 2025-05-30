@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#controls {
+    margin-bottom: 15px;
+}
+
+canvas {
+    border: 1px solid black;
+    display: block;
+    margin: auto;
+}
+
+#canvas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}

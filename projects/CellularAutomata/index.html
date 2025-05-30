@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1D Cellular Automaton</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.min.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="automaton.js"></script>
+    <script defer src="ruleset.js"></script>
+</head>
+<body>
+
+    <h1>1D Cellular Automaton</h1>
+
+    <div id="controls">
+        <label for="ruleInput">Rule Number:</label>
+        <input type="number" id="ruleInput" min="0" max="255" value="0">
+        <button id="resetBtn">Reset</button>
+    </div>
+
+    <div id="canvas-container">
+        <div id="automatonCanvas"></div>
+        <div id="ruleCanvas"></div>
+    </div>
+
+</body>
+</html>
